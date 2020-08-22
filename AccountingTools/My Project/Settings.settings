@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="SharePoint_User" Type="System.String" Scope="User">
+      <Value Profile="(Default)">fernando.arellano@totalit.com.pe</Value>
+    </Setting>
+    <Setting Name="SharePoint_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">07973865@pM1</Value>
+    </Setting>
+    <Setting Name="SharePoint_Url" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://totalitcompe.sharepoint.com/sites/Finanzas/</Value>
+    </Setting>
+    <Setting Name="LookAndFeel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Blue</Value>
+    </Setting>
+    <Setting Name="AudioEnabled" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="225d8278-e82f-48e2-8dab-2d173ac932be" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:25442/GlobalService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GlobalService.wsdl" MetadataType="Wsdl" ID="937f24e3-7562-48fd-9d67-511329250a06" SourceId="1" SourceUrl="http://localhost:25442/GlobalService.svc?wsdl" />
+    <MetadataFile FileName="GlobalService.xsd" MetadataType="Schema" ID="da3b6ac8-ea54-41fb-bfe5-73b7bda45d1d" SourceId="1" SourceUrl="http://localhost:25442/GlobalService.svc?xsd=xsd1" />
+    <MetadataFile FileName="GlobalService.disco" MetadataType="Disco" ID="dfe47f87-57bf-4c2a-9284-d4db9e037926" SourceId="1" SourceUrl="http://localhost:25442/GlobalService.svc?disco" />
+    <MetadataFile FileName="GlobalService2.xsd" MetadataType="Schema" ID="6ca93245-8c44-49cf-a36d-0df66056fbb2" SourceId="1" SourceUrl="http://localhost:25442/GlobalService.svc?xsd=xsd2" />
+    <MetadataFile FileName="GlobalService1.xsd" MetadataType="Schema" ID="86f381fc-c6e5-41ac-ba3f-ba7b6b37a56a" SourceId="1" SourceUrl="http://localhost:25442/GlobalService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
