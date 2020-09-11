@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MailBotServicesWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MailBot.Entidades" />
+      <xsd:import schemaLocation="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMailBotServicesWCF_ExecuteSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSQL" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_ExecuteSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_NewExecuteSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewExecuteSQL" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_NewExecuteSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewExecuteSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_ExecuteSQLNonQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSQLNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_ExecuteSQLNonQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteSQLNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_NewExecuteSQLNonQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewExecuteSQLNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_NewExecuteSQLNonQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewExecuteSQLNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertInputConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInputConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertInputConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInputConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateInputConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInputConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateInputConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInputConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteInputConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInputConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteInputConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInputConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllInputConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInputConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllInputConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInputConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableInputConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableInputConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableInputConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableInputConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertInputSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInputSubject" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertInputSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInputSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateInputSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInputSubject" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateInputSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInputSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteInputSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInputSubject" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteInputSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInputSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllInputSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInputSubject" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllInputSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInputSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableInputSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableInputSubject" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableInputSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableInputSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertInputType_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInputType" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertInputType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertInputTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateInputType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInputType" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateInputType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateInputTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteInputType_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInputType" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteInputType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInputTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllInputType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInputType" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllInputType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInputTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableInputType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableInputType" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableInputType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableInputTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertMessageConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertMessageConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateMessageConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateMessageConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteMessageConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessageConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteMessageConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessageConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllMessageConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessageConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllMessageConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessageConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableMessageConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableMessageConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableMessageConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableMessageConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertMessageLayout_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageLayout" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertMessageLayout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageLayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateMessageLayout_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageLayout" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateMessageLayout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageLayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteMessageLayout_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessageLayout" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteMessageLayout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessageLayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllMessageLayout_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessageLayout" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllMessageLayout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessageLayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableMessageLayout_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableMessageLayout" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableMessageLayout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableMessageLayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertMessageStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageStructure" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_InsertMessageStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMessageStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateMessageStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageStructure" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_UpdateMessageStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMessageStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteMessageStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessageStructure" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_DeleteMessageStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMessageStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllMessageStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessageStructure" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllMessageStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessageStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableMessageStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableMessageStructure" />
+  </wsdl:message>
+  <wsdl:message name="IMailBotServicesWCF_GetAllDataTableMessageStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDataTableMessageStructureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMailBotServicesWCF">
+    <wsdl:operation name="ExecuteSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/ExecuteSQL" message="tns:IMailBotServicesWCF_ExecuteSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/ExecuteSQLResponse" message="tns:IMailBotServicesWCF_ExecuteSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewExecuteSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/NewExecuteSQL" message="tns:IMailBotServicesWCF_NewExecuteSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/NewExecuteSQLResponse" message="tns:IMailBotServicesWCF_NewExecuteSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSQLNonQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/ExecuteSQLNonQuery" message="tns:IMailBotServicesWCF_ExecuteSQLNonQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/ExecuteSQLNonQueryResponse" message="tns:IMailBotServicesWCF_ExecuteSQLNonQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewExecuteSQLNonQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/NewExecuteSQLNonQuery" message="tns:IMailBotServicesWCF_NewExecuteSQLNonQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/NewExecuteSQLNonQueryResponse" message="tns:IMailBotServicesWCF_NewExecuteSQLNonQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInputConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertInputConfiguration" message="tns:IMailBotServicesWCF_InsertInputConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertInputConfigurationResponse" message="tns:IMailBotServicesWCF_InsertInputConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInputConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateInputConfiguration" message="tns:IMailBotServicesWCF_UpdateInputConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateInputConfigurationResponse" message="tns:IMailBotServicesWCF_UpdateInputConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInputConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteInputConfiguration" message="tns:IMailBotServicesWCF_DeleteInputConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteInputConfigurationResponse" message="tns:IMailBotServicesWCF_DeleteInputConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInputConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllInputConfiguration" message="tns:IMailBotServicesWCF_GetAllInputConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllInputConfigurationResponse" message="tns:IMailBotServicesWCF_GetAllInputConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableInputConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputConfiguration" message="tns:IMailBotServicesWCF_GetAllDataTableInputConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputConfigurationResponse" message="tns:IMailBotServicesWCF_GetAllDataTableInputConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInputSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertInputSubject" message="tns:IMailBotServicesWCF_InsertInputSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertInputSubjectResponse" message="tns:IMailBotServicesWCF_InsertInputSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInputSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateInputSubject" message="tns:IMailBotServicesWCF_UpdateInputSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateInputSubjectResponse" message="tns:IMailBotServicesWCF_UpdateInputSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInputSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteInputSubject" message="tns:IMailBotServicesWCF_DeleteInputSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteInputSubjectResponse" message="tns:IMailBotServicesWCF_DeleteInputSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInputSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllInputSubject" message="tns:IMailBotServicesWCF_GetAllInputSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllInputSubjectResponse" message="tns:IMailBotServicesWCF_GetAllInputSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableInputSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputSubject" message="tns:IMailBotServicesWCF_GetAllDataTableInputSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputSubjectResponse" message="tns:IMailBotServicesWCF_GetAllDataTableInputSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInputType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertInputType" message="tns:IMailBotServicesWCF_InsertInputType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertInputTypeResponse" message="tns:IMailBotServicesWCF_InsertInputType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInputType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateInputType" message="tns:IMailBotServicesWCF_UpdateInputType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateInputTypeResponse" message="tns:IMailBotServicesWCF_UpdateInputType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInputType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteInputType" message="tns:IMailBotServicesWCF_DeleteInputType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteInputTypeResponse" message="tns:IMailBotServicesWCF_DeleteInputType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInputType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllInputType" message="tns:IMailBotServicesWCF_GetAllInputType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllInputTypeResponse" message="tns:IMailBotServicesWCF_GetAllInputType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableInputType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputType" message="tns:IMailBotServicesWCF_GetAllDataTableInputType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputTypeResponse" message="tns:IMailBotServicesWCF_GetAllDataTableInputType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertMessageConfiguration" message="tns:IMailBotServicesWCF_InsertMessageConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertMessageConfigurationResponse" message="tns:IMailBotServicesWCF_InsertMessageConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateMessageConfiguration" message="tns:IMailBotServicesWCF_UpdateMessageConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateMessageConfigurationResponse" message="tns:IMailBotServicesWCF_UpdateMessageConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteMessageConfiguration" message="tns:IMailBotServicesWCF_DeleteMessageConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteMessageConfigurationResponse" message="tns:IMailBotServicesWCF_DeleteMessageConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllMessageConfiguration" message="tns:IMailBotServicesWCF_GetAllMessageConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllMessageConfigurationResponse" message="tns:IMailBotServicesWCF_GetAllMessageConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableMessageConfiguration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageConfiguration" message="tns:IMailBotServicesWCF_GetAllDataTableMessageConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageConfigurationResponse" message="tns:IMailBotServicesWCF_GetAllDataTableMessageConfiguration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageLayout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertMessageLayout" message="tns:IMailBotServicesWCF_InsertMessageLayout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertMessageLayoutResponse" message="tns:IMailBotServicesWCF_InsertMessageLayout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageLayout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateMessageLayout" message="tns:IMailBotServicesWCF_UpdateMessageLayout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateMessageLayoutResponse" message="tns:IMailBotServicesWCF_UpdateMessageLayout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageLayout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteMessageLayout" message="tns:IMailBotServicesWCF_DeleteMessageLayout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteMessageLayoutResponse" message="tns:IMailBotServicesWCF_DeleteMessageLayout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageLayout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllMessageLayout" message="tns:IMailBotServicesWCF_GetAllMessageLayout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllMessageLayoutResponse" message="tns:IMailBotServicesWCF_GetAllMessageLayout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableMessageLayout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageLayout" message="tns:IMailBotServicesWCF_GetAllDataTableMessageLayout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageLayoutResponse" message="tns:IMailBotServicesWCF_GetAllDataTableMessageLayout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageStructure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertMessageStructure" message="tns:IMailBotServicesWCF_InsertMessageStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/InsertMessageStructureResponse" message="tns:IMailBotServicesWCF_InsertMessageStructure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageStructure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateMessageStructure" message="tns:IMailBotServicesWCF_UpdateMessageStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/UpdateMessageStructureResponse" message="tns:IMailBotServicesWCF_UpdateMessageStructure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageStructure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteMessageStructure" message="tns:IMailBotServicesWCF_DeleteMessageStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/DeleteMessageStructureResponse" message="tns:IMailBotServicesWCF_DeleteMessageStructure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageStructure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllMessageStructure" message="tns:IMailBotServicesWCF_GetAllMessageStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllMessageStructureResponse" message="tns:IMailBotServicesWCF_GetAllMessageStructure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableMessageStructure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageStructure" message="tns:IMailBotServicesWCF_GetAllDataTableMessageStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageStructureResponse" message="tns:IMailBotServicesWCF_GetAllDataTableMessageStructure_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMailBotServicesWCF" type="tns:IMailBotServicesWCF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteSQL">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/ExecuteSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewExecuteSQL">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/NewExecuteSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteSQLNonQuery">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/ExecuteSQLNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewExecuteSQLNonQuery">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/NewExecuteSQLNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInputConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/InsertInputConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInputConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/UpdateInputConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInputConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/DeleteInputConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInputConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllInputConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableInputConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInputSubject">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/InsertInputSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInputSubject">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/UpdateInputSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInputSubject">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/DeleteInputSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInputSubject">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllInputSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableInputSubject">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputSubject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInputType">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/InsertInputType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInputType">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/UpdateInputType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInputType">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/DeleteInputType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInputType">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllInputType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableInputType">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableInputType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/InsertMessageConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/UpdateMessageConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/DeleteMessageConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllMessageConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableMessageConfiguration">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageLayout">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/InsertMessageLayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageLayout">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/UpdateMessageLayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageLayout">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/DeleteMessageLayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageLayout">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllMessageLayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableMessageLayout">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageLayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMessageStructure">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/InsertMessageStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMessageStructure">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/UpdateMessageStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageStructure">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/DeleteMessageStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessageStructure">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllMessageStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDataTableMessageStructure">
+      <soap:operation soapAction="http://tempuri.org/IMailBotServicesWCF/GetAllDataTableMessageStructure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MailBotServicesWCF">
+    <wsdl:port name="BasicHttpBinding_IMailBotServicesWCF" binding="tns:BasicHttpBinding_IMailBotServicesWCF">
+      <soap:address location="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

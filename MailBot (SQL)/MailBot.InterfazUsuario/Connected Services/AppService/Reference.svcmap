@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="caa83d04-c90d-4e81-a632-f989b6228edb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MailBotServicesWCF.xsd" MetadataType="Schema" ID="2da5ff24-7f8c-4422-be73-723012cb9897" SourceId="1" SourceUrl="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd2" />
+    <MetadataFile FileName="MailBotServicesWCF1.xsd" MetadataType="Schema" ID="26434a6b-6149-4d01-b897-2f91f2bb710d" SourceId="1" SourceUrl="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd4" />
+    <MetadataFile FileName="MailBotServicesWCF.disco" MetadataType="Disco" ID="23cbc016-b590-484b-9e6e-8f80e5e15208" SourceId="1" SourceUrl="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?disco" />
+    <MetadataFile FileName="MailBotServicesWCF2.xsd" MetadataType="Schema" ID="6fc05a39-4e28-4c0d-b373-29a000f18091" SourceId="1" SourceUrl="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd3" />
+    <MetadataFile FileName="MailBotServicesWCF3.xsd" MetadataType="Schema" ID="ee9c45ee-2ddf-4310-9749-ec23d424d705" SourceId="1" SourceUrl="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd5" />
+    <MetadataFile FileName="MailBotServicesWCF4.xsd" MetadataType="Schema" ID="f7734d35-4b18-433c-8c66-482f35f68b81" SourceId="1" SourceUrl="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="MailBotServicesWCF.wsdl" MetadataType="Wsdl" ID="6c72dd2f-282d-47df-b116-1c6f53342806" SourceId="1" SourceUrl="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?wsdl" />
+    <MetadataFile FileName="MailBotServicesWCF5.xsd" MetadataType="Schema" ID="f2612545-3d8d-4a8e-9878-8a181ca6d74d" SourceId="1" SourceUrl="http://vapps.dyndns-server.com:2451/MailBotServicesWCF.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

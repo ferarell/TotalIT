@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s0="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="OdooService" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="ExecuteSQL">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="SqlText" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecuteSQLResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="ExecuteSQLResult">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DataTable" nillable="true">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="ExecuteSQLSoapIn">
+    <part name="parameters" element="s0:ExecuteSQL" />
+  </message>
+  <message name="ExecuteSQLSoapOut">
+    <part name="parameters" element="s0:ExecuteSQLResponse" />
+  </message>
+  <message name="ExecuteSQLHttpGetIn">
+    <part name="SqlText" type="s:string" />
+  </message>
+  <message name="ExecuteSQLHttpGetOut">
+    <part name="Body" element="s0:DataTable" />
+  </message>
+  <message name="ExecuteSQLHttpPostIn">
+    <part name="SqlText" type="s:string" />
+  </message>
+  <message name="ExecuteSQLHttpPostOut">
+    <part name="Body" element="s0:DataTable" />
+  </message>
+  <portType name="OdooServiceSoap">
+    <operation name="ExecuteSQL">
+      <input message="s0:ExecuteSQLSoapIn" />
+      <output message="s0:ExecuteSQLSoapOut" />
+    </operation>
+  </portType>
+  <portType name="OdooServiceSoap12">
+    <operation name="ExecuteSQL">
+      <input message="s0:ExecuteSQLSoapIn" />
+      <output message="s0:ExecuteSQLSoapOut" />
+    </operation>
+  </portType>
+  <portType name="OdooServiceHttpGet">
+    <operation name="ExecuteSQL">
+      <input message="s0:ExecuteSQLHttpGetIn" />
+      <output message="s0:ExecuteSQLHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="OdooServiceHttpPost">
+    <operation name="ExecuteSQL">
+      <input message="s0:ExecuteSQLHttpPostIn" />
+      <output message="s0:ExecuteSQLHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="OdooServiceSoap" type="s0:OdooServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ExecuteSQL">
+      <soap:operation soapAction="http://tempuri.org/ExecuteSQL" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="OdooServiceSoap12" type="s0:OdooServiceSoap12">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ExecuteSQL">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteSQL" style="document" />
+      <input>
+        <soap12:body use="literal" />
+      </input>
+      <output>
+        <soap12:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="OdooServiceHttpGet" type="s0:OdooServiceHttpGet">
+    <http:binding verb="GET" />
+    <operation name="ExecuteSQL">
+      <http:operation location="/ExecuteSQL" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="OdooServiceHttpPost" type="s0:OdooServiceHttpPost">
+    <http:binding verb="POST" />
+    <operation name="ExecuteSQL">
+      <http:operation location="/ExecuteSQL" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="OdooService">
+    <port name="OdooServiceSoap" binding="s0:OdooServiceSoap">
+      <soap:address location="http://proyekta.quipuerp.com/OdooService.asmx" />
+    </port>
+    <port name="OdooServiceSoap12" binding="s0:OdooServiceSoap12">
+      <soap12:address location="http://proyekta.quipuerp.com/OdooService.asmx" />
+    </port>
+    <port name="OdooServiceHttpGet" binding="s0:OdooServiceHttpGet">
+      <http:address location="http://proyekta.quipuerp.com/OdooService.asmx" />
+    </port>
+    <port name="OdooServiceHttpPost" binding="s0:OdooServiceHttpPost">
+      <http:address location="http://proyekta.quipuerp.com/OdooService.asmx" />
+    </port>
+  </service>
+</definitions>
