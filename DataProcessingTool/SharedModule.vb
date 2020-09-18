@@ -175,7 +175,7 @@ Module SharedModule
 
     Friend Sub ExportarExcel(sender As System.Object)
         Dim oGridView As New GridView
-        oGridView = sender
+        oGridView = sender.MainView
         Dim sPath As String = Path.GetTempPath
         Dim sFileName = (FileIO.FileSystem.GetTempFileName).Replace(".tmp", ".xls")
         'oGridView.OptionsPrint.ExpandAllDetails = True
@@ -599,7 +599,6 @@ Module SharedModule
         dtQuery = My.Settings.CompanyTable
         Return dtQuery
     End Function
-           
 
     Friend Function GetAccountsList(ServiceUrl As String) As DataTable
         Dim dtQuery As New DataTable
@@ -613,4 +612,37 @@ Module SharedModule
         Return dtQuery
     End Function
 
+    Function ExtractOnlyNumbers(TextToExtract As String)
+        Dim sResult As String = ""
+        For index = 1 To TextToExtract.Length
+            If IsNumeric(Mid(TextToExtract, index, 1)) Then
+                sResult += Mid(TextToExtract, index, 1)
+            End If
+        Next
+        Return sResult
+    End Function
+
+    Function RemoveCharacter(ByVal stringToCleanUp)
+        Dim characterToRemove As String = ""
+        characterToRemove = Chr(34) + "#$%&'()*+,-./\~"
+        Dim firstThree As Char() = characterToRemove.Take(16).ToArray()
+        For index = 1 To firstThree.Length - 1
+            stringToCleanUp = stringToCleanUp.ToString.Replace(firstThree(index), "")
+        Next
+        Return stringToCleanUp
+    End Function
+
+    Function LastDayOfMonth(ByVal RefDate As Date) As Date
+        LastDayOfMonth = DateSerial(Year(RefDate), Month(RefDate) + 1, 0)
+    End Function
+
+    Friend Function Decompress(zipPath As String, extractPath As String) As Boolean
+        Dim bResult As Boolean = True
+        Try
+            ZipFile.ExtractToDirectory(zipPath, extractPath)
+        Catch ex As Exception
+            bResult = False
+        End Try
+        Return bResult
+    End Function
 End Module

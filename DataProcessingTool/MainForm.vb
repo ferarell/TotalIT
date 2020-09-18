@@ -81,11 +81,11 @@ Public Class MainForm
     End Sub
 
     Private Sub NavBarItem3_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem3.LinkClicked
-        OpenForm(LibroDiarioForm)
+        'OpenForm(LibroDiarioForm)
     End Sub
 
     Private Sub NavBarItem5_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem5.LinkClicked
-        OpenForm(LibroMayorForm)
+        'OpenForm(LibroMayorForm)
     End Sub
 
     Private Sub MainForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -95,11 +95,11 @@ Public Class MainForm
     End Sub
 
     Private Sub NavBarItem6_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem6.LinkClicked
-        OpenForm(BalanceGeneralForm)
+        'OpenForm(BalanceGeneralForm)
     End Sub
 
     Private Sub NavBarItem7_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem7.LinkClicked
-        OpenForm(EstadoResultadoForm)
+        'OpenForm(EstadoResultadoForm)
     End Sub
 
     Private Sub NavBarItem9_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem9.LinkClicked
@@ -109,18 +109,22 @@ Public Class MainForm
     End Sub
 
     Private Sub NavBarItem8_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem8.LinkClicked
-        OpenForm(InventarioValorizadoForm)
+        'OpenForm(InventarioValorizadoForm)
     End Sub
 
     Private Sub NavBarItem4_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem4.LinkClicked
-        OpenForm(MovimientoContableForm)
+        'OpenForm(MovimientoContableForm)
     End Sub
 
     Private Sub NavBarItem10_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem10.LinkClicked
-        OpenForm(SaldoCuentaAnualForm)
+        'OpenForm(SaldoCuentaAnualForm)
     End Sub
 
     Private Sub NavBarItem11_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem11.LinkClicked
-        OpenForm(LibroCajaBancosForm)
+        'OpenForm(LibroCajaBancosForm)
+    End Sub
+
+    Private Sub NavBarItem12_LinkClicked(sender As Object, e As DevExpress.XtraNavBar.NavBarLinkEventArgs) Handles NavBarItem12.LinkClicked
+        OpenForm(SaleByWebForm)
     End Sub
 End Class

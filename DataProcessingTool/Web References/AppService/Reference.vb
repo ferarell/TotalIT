@@ -25,7 +25,7 @@ Imports System.Xml.Serialization
 Namespace AppService
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code"),  _
      System.Web.Services.WebServiceBindingAttribute(Name:="OdooServiceSoap", [Namespace]:="http://tempuri.org/")>  _
@@ -39,7 +39,7 @@ Namespace AppService
         '''<remarks/>
         Public Sub New()
             MyBase.New
-            Me.Url = Global.QuipuReports.My.MySettings.Default.OdooConnector_AppService_OdooService
+            Me.Url = Global.DataProcessingTool.My.MySettings.Default.OdooConnector_AppService_OdooService
             If (Me.IsLocalFileSystemWebService(Me.Url) = true) Then
                 Me.UseDefaultCredentials = true
                 Me.useDefaultCredentialsSetExplicitly = false
@@ -122,11 +122,11 @@ Namespace AppService
     End Class
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0")>  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")>  _
     Public Delegate Sub ExecuteSQLCompletedEventHandler(ByVal sender As Object, ByVal e As ExecuteSQLCompletedEventArgs)
     
     '''<remarks/>
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2046.0"),  _
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0"),  _
      System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.ComponentModel.DesignerCategoryAttribute("code")>  _
     Partial Public Class ExecuteSQLCompletedEventArgs

@@ -6,12 +6,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8CDCBB16-9A13-4C4D-8350-90B5192E6533}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>QuipuReports.My.MyApplication</StartupObject>
-    <RootNamespace>QuipuReports</RootNamespace>
-    <AssemblyName>QuipuReports</AssemblyName>
+    <StartupObject>DataProcessingTool.My.MyApplication</StartupObject>
+    <RootNamespace>DataProcessingTool</RootNamespace>
+    <AssemblyName>DataProcessingTool</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
@@ -47,7 +47,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>QuipuReports.xml</DocumentationFile>
+    <DocumentationFile>DataProcessingTool.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -57,7 +57,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>QuipuReports.xml</DocumentationFile>
+    <DocumentationFile>DataProcessingTool.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -74,7 +74,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>00D8AA11366D1744D3C459D4AFDE595F57BF365D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>05194ADE30532268936F849256E3745D77284338</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>
@@ -196,28 +196,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnexoClientesForm.Designer.vb">
+      <DependentUpon>AnexoClientesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnexoClientesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="BalanceGeneralForm.Designer.vb">
-      <DependentUpon>BalanceGeneralForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BalanceGeneralForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EstadoResultadoForm.Designer.vb">
-      <DependentUpon>EstadoResultadoForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EstadoResultadoForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="CustomValidationRule.vb" />
     <Compile Include="dsMain.vb">
       <DependentUpon>dsMain.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LibroCajaBancosForm.designer.vb">
-      <DependentUpon>LibroCajaBancosForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="LibroCajaBancosForm.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\BalanceComprobacion.vb">
       <AutoGen>True</AutoGen>
@@ -238,30 +226,6 @@
       <DependentUpon>LibroCajaBancos2.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="SaldoCuentaAnualForm.Designer.vb">
-      <DependentUpon>SaldoCuentaAnualForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SaldoCuentaAnualForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InventarioValorizadoForm.Designer.vb">
-      <DependentUpon>InventarioValorizadoForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="InventarioValorizadoForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LibroMayorForm.Designer.vb">
-      <DependentUpon>LibroMayorForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="LibroMayorForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MovimientoContableForm.Designer.vb">
-      <DependentUpon>MovimientoContableForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MovimientoContableForm.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reports\BalanceGeneral.vb">
       <DependentUpon>BalanceGeneral.rpt</DependentUpon>
@@ -303,12 +267,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsMain.xsd</DependentUpon>
     </Compile>
-    <Compile Include="LibroDiarioForm.Designer.vb">
-      <DependentUpon>LibroDiarioForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="LibroDiarioForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="LookAndFeelForm.designer.vb">
       <DependentUpon>LookAndFeelForm.vb</DependentUpon>
     </Compile>
@@ -325,6 +283,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -398,15 +357,6 @@
     <None Include="Web References\AppService\OdooService.disco" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\DataSources\System.Data.DataTable.datasource" />
-    <EmbeddedResource Include="BalanceGeneralForm.resx">
-      <DependentUpon>BalanceGeneralForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EstadoResultadoForm.resx">
-      <DependentUpon>EstadoResultadoForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LibroCajaBancosForm.resx">
-      <DependentUpon>LibroCajaBancosForm.vb</DependentUpon>
-    </EmbeddedResource>
     <Content Include="Reports\LibroCajaBancos1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LibroCajaBancos1.vb</LastGenOutput>
@@ -417,30 +367,18 @@
       <LastGenOutput>LibroCajaBancos2.vb</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="AnexoClientesForm.resx">
+      <DependentUpon>AnexoClientesForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\BalanceComprobacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BalanceComprobacion.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SaldoCuentaAnualForm.resx">
-      <DependentUpon>SaldoCuentaAnualForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InventarioValorizadoForm.resx">
-      <DependentUpon>InventarioValorizadoForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LibroMayorForm.resx">
-      <DependentUpon>LibroMayorForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LibroDiarioForm.resx">
-      <DependentUpon>LibroDiarioForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LookAndFeelForm.resx">
       <DependentUpon>LookAndFeelForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MovimientoContableForm.resx">
-      <DependentUpon>MovimientoContableForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">

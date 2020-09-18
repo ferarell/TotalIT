@@ -147,9 +147,9 @@
       <Project>{8d66ab9f-c196-45c3-bc0b-fdcbfa36942a}</Project>
       <Name>MailBot.Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MailBot.LogicaNegocio\MailBot.LogicaNegocio.vbproj">
+    <ProjectReference Include="..\MailBot.BL\MailBot.BL.vbproj">
       <Project>{feee9501-a147-454e-b6c9-e4e821f901ef}</Project>
-      <Name>MailBot.LogicaNegocio</Name>
+      <Name>MailBot.BL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -106,9 +106,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MailBot.AccesoDatos\MailBot.AccesoDatos.vbproj">
+    <ProjectReference Include="..\MailBot.DA\MailBot.DA.vbproj">
       <Project>{a32a6348-d49e-4d56-b2f5-36345cf6f3cf}</Project>
-      <Name>MailBot.AccesoDatos</Name>
+      <Name>MailBot.DA</Name>
     </ProjectReference>
     <ProjectReference Include="..\MailBot.Entidades\MailBot.Entidades.vbproj">
       <Project>{8d66ab9f-c196-45c3-bc0b-fdcbfa36942a}</Project>

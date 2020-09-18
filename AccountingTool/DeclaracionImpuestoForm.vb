@@ -1,6 +1,7 @@
 ﻿Imports DevExpress.XtraEditors
 Imports DevExpress.XtraEditors.DXErrorProvider
 Imports DevExpress.XtraSplashScreen
+Imports System.Threading
 Public Class DeclaracionImpuestoForm
     Dim oSharePointTransactions As New SharePointListTransactions
     Dim dtSunat, dtPeriod, dtMovimientos, dtImpuesto As New DataTable
@@ -54,6 +55,7 @@ Public Class DeclaracionImpuestoForm
         gcDeclaraciones.DataSource = dtSunat
     End Sub
     Private Sub DeclaracionImpuestoForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CheckForIllegalCrossThreadCalls = False
         DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(My.Settings.LookAndFeel)
         LoadPeriod()
     End Sub

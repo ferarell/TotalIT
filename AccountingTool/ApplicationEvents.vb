@@ -9,7 +9,7 @@ Namespace My
     ' NetworkAvailabilityChanged: Se genera cuando se conecta o desconecta la conexión de red.
     Partial Friend Class MyApplication
         Private Sub MyApplication_Startup(sender As Object, e As ApplicationServices.StartupEventArgs) Handles Me.Startup
-            Thread.Sleep(3000)
+            Thread.Sleep(3500)
         End Sub
     End Class
 End Namespace
