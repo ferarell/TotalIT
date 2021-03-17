@@ -95,10 +95,16 @@ Public Class SharePointListTransactions
 
         Dim dtItems As New DataTable
         For c = 0 To FieldsList.Count - 1
-            dtItems.Columns.Add(FieldsList(c)(0))
+            If Not FieldsList.Count = 1 Then
+                dtItems.Columns.Add(FieldsList(c)(0))
+            Else
+                dtItems.Columns.Add(FieldsList(c)(0), System.Type.GetType(FieldsList(c)(1)))
+            End If
+
         Next
 
         For Each Item As ListItem In oItemsList
+
             dtItems.Rows.Add()
             For c = 0 To dtItems.Columns.Count - 1
                 Try

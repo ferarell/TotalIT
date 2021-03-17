@@ -1,0 +1,53 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="SQLConStr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server=localhost;Database=proyekta;User Id=postgres;
+Password=User2017;</Value>
+    </Setting>
+    <Setting Name="MySQLConStr" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PostgreSQLConStr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server=vapps.dyndns-server.com;Port=5432;Database=proyekta;User Id=postgres;
+Password=User2017;</Value>
+    </Setting>
+    <Setting Name="DBHostServer" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DBPortServer" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DBUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DBPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DBSslConnection" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DBName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LookAndFeel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Office 2010 Black</Value>
+    </Setting>
+    <Setting Name="PaintStyle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ExplorerBar</Value>
+    </Setting>
+    <Setting Name="OdooConnector_AppService_OdooService" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">http://proyekta.quipuerp.com/OdooService.asmx</Value>
+    </Setting>
+    <Setting Name="CompanyTable" Type="System.Data.DataTable" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ComPayU" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">3.75</Value>
+    </Setting>
+    <Setting Name="CargoFijoPayU" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
